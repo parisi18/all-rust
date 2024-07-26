@@ -1,8 +1,12 @@
 #[derive(Debug)]
 enum Message {
-    // TODO: Define a few types of messages as used below.
+    // TODO: Implement the message variant types based on their usage below.
+    Resize,
+    Move,
+    Echo,
+    ChangeColor,
+    Quit,
 }
-
 fn main() {
     println!("{:?}", Message::Resize);
     println!("{:?}", Message::Move);
