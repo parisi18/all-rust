@@ -6,6 +6,8 @@ mod delicious_snacks {
     // TODO: Add the following two `use` statements after fixing them.
     // use self::fruits::PEAR as ???;
     // use self::veggies::CUCUMBER as ???;
+    pub use crate::delicious_snacks::fruits::PEAR as fruit;
+    pub use crate::delicious_snacks::veggies::CUCUMBER as veggie;
 
     mod fruits {
         pub const PEAR: &str = "Pear";
@@ -19,6 +21,8 @@ mod delicious_snacks {
 }
 
 fn main() {
+
+
     println!(
         "favorite snacks: {} and {}",
         delicious_snacks::fruit,
