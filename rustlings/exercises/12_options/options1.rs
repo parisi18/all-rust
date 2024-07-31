@@ -4,6 +4,14 @@
 // `hour_of_day` is higher than 23.
 fn maybe_icecream(hour_of_day: u16) -> Option<u16> {
     // TODO: Complete the function body.
+    let mut output: Option<u16> = Option::<u16>::None;
+        match hour_of_day {
+            0..=21 => output = Some(5),
+            22..=23 => output = Some(0),
+            _ => output = None,
+        }
+    
+    output
 }
 
 fn main() {
@@ -19,6 +27,9 @@ mod tests {
         // TODO: Fix this test. How do you get the value contained in the
         // Option?
         let icecreams = maybe_icecream(12);
+
+        // Convert the Option to a raw value.;
+        let icecreams = icecreams.unwrap();
 
         assert_eq!(icecreams, 5); // Don't change this line.
     }
